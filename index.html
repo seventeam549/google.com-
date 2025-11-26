@@ -3,74 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>پروژه گیت‌هاب | پیش‌نمایش ریلز</title>
+    <title>صفحه تمام صفحه ریلز گیت‌هاب</title>
     
     <meta property="og:type" content="website">
-
     <meta property="og:title" content="پروژه گیت‌هاب: مشاهده در موبایل">
-
-    <meta property="og:description" content="برای مشاهده جزئیات بیشتر روی تصویر کلیک کنید.">
-
+    <meta property="og:description" content="برای اطلاعات بیشتر روی تصویر کلیک کنید.">
     <meta property="og:url" content="https://seventeam549.github.io/google.com-/">
     
     <meta property="og:image" content="https://raw.githubusercontent.com/seventeam549/google.com-/main/image.jpeg">
 
     <meta property="og:image:width" content="600"> 
-
     <meta property="og:image:height" content="1067"> 
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/seventeam549/google.com-/main/image.jpeg">
 
     <style>
-        body {
+        /* حذف تمام حاشیه‌ها و مطمئن شدن از اینکه صفحه 100% ابعاد را بگیرد */
+        html, body {
             margin: 0;
-            padding: 10px;
-            background-color: #f0f0f0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* حذف کامل نوار اسکرول */
+        }
+        
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            background-color: #000; /* رنگ پس‌زمینه سیاه برای تکمیل حس تمام صفحه */
         }
 
-        .reel-container {
-            max-width: 400px;
-            width: 100%; 
-            margin: 20px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .reel-link {
+        /* مطمئن شدن از اینکه لینک تمام صفحه را پوشش دهد */
+        .fullscreen-link {
             display: block;
+            width: 100%;
+            height: 100%;
             line-height: 0;
         }
 
         .responsive-image {
-            /* تنظیم نسبت تصویر ۹ به ۱۶ (ریلز) */
+            /* این دو خط تضمین می‌کنند که تصویر تمام عرض و ارتفاع نمایشگر را پر کند */
+            width: 100vw; 
+            height: 100vh;
+            
+            /* object-fit: cover تضمین می‌کند که تصویر 9:16 کل صفحه را پر کند، حتی اگر بخش‌هایی از تصویر بریده شوند. */
+            object-fit: cover; 
             aspect-ratio: 9 / 16; 
-            width: 100%; 
-            height: 100%;
-            object-fit: cover; /* مطمئن شدن از پوشش کامل کادر */
-            display: block;
         }
 
     </style>
 </head>
 <body>
 
-    <div class="reel-container">
+    <a href="https://shorturl.at/s7fXN" target="_blank" class="fullscreen-link">
         
-        <a href="https://shorturl.at/s7fXN" target="_blank" class="reel-link">
-            
-            <img 
-                src="image.jpeg" 
-                alt="تصویر ریلز گیت‌هاب" 
-                class="responsive-image"
-            >
-            
-        </a>
+        <img 
+            src="image.jpeg" 
+            alt="تصویر تمام صفحه ریلز گیت‌هاب" 
+            class="responsive-image"
+        >
         
-    </div>
+    </a>
 
 </body>
 </html>
