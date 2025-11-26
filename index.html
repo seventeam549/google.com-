@@ -3,46 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تصویر ریلز محلی (لینک‌دار)</title>
+    <title>پروژه گیت‌هاب | پیش‌نمایش ریلز</title>
     
+    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="پروژه گیت‌هاب: مشاهده در موبایل">
+
+    <meta property="og:description" content="برای مشاهده جزئیات بیشتر روی تصویر کلیک کنید.">
+
+    <meta property="og:url" content="https://seventeam549.github.io/google.com-/">
+    
+    <meta property="og:image" content="https://raw.githubusercontent.com/seventeam549/google.com-/main/image.jpeg">
+
+    <meta property="og:image:width" content="600"> 
+
+    <meta property="og:image:height" content="1067"> 
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/seventeam549/google.com-/main/image.jpeg">
+
     <style>
-        /* تنظیمات پایه */
         body {
             margin: 0;
             padding: 10px;
             background-color: #f0f0f0;
             display: flex;
-            justify-content: center; /* مرکز قرار دادن افقی */
+            justify-content: center;
             align-items: center;
             min-height: 100vh;
         }
 
-        /* کانتینر اصلی برای کنترل حداکثر عرض (شبیه‌سازی صفحه موبایل) */
         .reel-container {
-            /* حداکثر عرض مناسب برای نمایش ریلز */
             max-width: 400px;
             width: 100%; 
             margin: 20px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* مطمئن شدن از اینکه تگ لینک (a) تمام فضای تصویر را پوشش دهد */
         .reel-link {
             display: block;
             line-height: 0;
         }
 
-        /* استایل‌های اصلی تصویر برای ابعاد ریلز و ریسپانسیو بودن */
         .responsive-image {
-            /* تنظیم نسبت تصویر ۹ به ۱۶ (ریلز اینستاگرام) */
+            /* تنظیم نسبت تصویر ۹ به ۱۶ (ریلز) */
             aspect-ratio: 9 / 16; 
-            
-            width: 100%; /* عرض کامل کانتینر را بگیرد */
+            width: 100%; 
             height: 100%;
-            
-            /* تضمین می‌کند تصویر بدون تغییر نسبت، کادر ۹:۱۶ را پر کند (با احتمال برش) */
-            object-fit: cover; 
-            
+            object-fit: cover; /* مطمئن شدن از پوشش کامل کادر */
             display: block;
         }
 
@@ -56,11 +64,12 @@
             
             <img 
                 src="image.jpeg" 
-                alt="تصویر ریلز محلی و لینک‌دار" 
+                alt="تصویر ریلز گیت‌هاب" 
                 class="responsive-image"
             >
             
         </a>
+        
     </div>
 
 </body>
